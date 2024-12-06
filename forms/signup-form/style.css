@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Open Sans", serif;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    background: url('./bg-img.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-container{
+    width: 97%;
+    max-width: 400px;
+    padding: 20px;
+    backdrop-filter: blur(7px);
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px rgba(116, 112, 246, 0.16);
+    animation: fadeInDown 1s linear;
+}
+
+@keyframes fadeInDown {
+    0%{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    50%{
+        opacity: 0.5;
+        transform: translateY(-50%);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1{
+    text-align: center;
+    text-transform: capitalize;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    margin-bottom: 30px;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    border-radius: 20px;
+    box-shadow: inset -2px -2px 2px #534aff, inset 2px 2px 2px #161616;
+    color: #fff;
+    font-size: 16px;
+    background: transparent;
+    caret-color: black;
+    cursor: text;
+}
+
+::placeholder{
+    color: #ccc;
+    text-transform: capitalize;
+    font-size: 16px;
+}
+
+button{
+    background: #534aff;
+    text-transform: capitalize;
+    color: #fff;
+    border: 0;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 20px 0 15px;
+}
+
+button:hover{
+    background: #635bff;
+    transition: 0.7s ease-in-out;
+}
