@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account</title>
+    <!-- Font-awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-gray-800 text-white">
+    <div class="relative h-screen">
+      <button
+        id="showBtn"
+        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-emerald-900 hover:bg-emerald-800 rounded-md capitalize px-8 py-2 text-lg"
+      >
+        create account
+      </button>
+    </div>
+
+    <div
+      class="md:h-screen fixed inset-0 w-full h-full overflow-auto flex items-center p-3 scale-0 transition-all ease-in-out delay-150 duration-300"
+      id="form"
+    >
+      <div
+        class="max-w-screen-lg m-auto grid md:grid-cols-2 grid-cols-1 bg-gray-900 rounded-2xl shadow-md shadow-emerald-900"
+      >
+        <div class="p-4 relative">
+          <img
+            src="./img/mountain.jpg"
+            class="rounded-2xl w-full md:aspect-[5/6] aspect-square object-cover md:h-full"
+            alt=""
+          />
+
+          <button
+            class="absolute top-5 right-5 capitalize bg-gray-900 bg-opacity-70 rounded-full px-4 py-1"
+            id="backBtn"
+          >
+            back <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+
+        <div class="p-7">
+          <h1 class="capitalize text-4xl text-center mb-4">
+            create an account
+          </h1>
+          <p class="text-gray-400 text-center mb-7">
+            Already have an account?
+            <a href="#" class="capitalize text-emerald-700 underline">log in</a>
+          </p>
+
+          <form class="mb-4">
+            <div class="grid md:grid-cols-2 grid-cols-1 gap-4 mb-2">
+              <div>
+                <label for="firstName" class="block capitalize mb-2"
+                  >first name</label
+                >
+                <input
+                  type="text"
+                  name="firstName"
+                  id="firstName"
+                  class="w-full border-0 rounded-md px-2 py-1 focus:outline-none focus:border-2 focus:border-emerald-900 bg-gray-800"
+                />
+              </div>
+
+              <div>
+                <label for="lastName" class="block capitalize mb-2"
+                  >last name</label
+                >
+                <input
+                  type="text"
+                  name="lastName"
+                  id="lastName"
+                  class="w-full border-0 rounded-md px-2 py-1 focus:outline-none focus:border-2 focus:border-emerald-900 bg-gray-800"
+                />
+              </div>
+            </div>
+
+            <div class="mb-2">
+              <label for="email" class="block capitalize mb-2">email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="w-full border-0 rounded-md px-2 py-1 focus:outline-none focus:border-2 focus:border-emerald-900 bg-gray-800"
+              />
+            </div>
+
+            <div class="mb-2">
+              <label for="password" class="block capitalize mb-2"
+                >password</label
+              >
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="w-full border-0 rounded-md px-2 py-1 focus:outline-none focus:border-2 focus:border-emerald-900 bg-gray-800"
+              />
+            </div>
+
+            <div class="mb-2">
+              <label for="confirmPassword" class="block capitalize mb-2"
+                >confirm password</label
+              >
+              <input
+                type="password"
+                name="confirmPassword"
+                id="confirmPassword"
+                class="w-full border-0 rounded-md px-2 py-1 focus:outline-none focus:border-2 focus:border-emerald-900 bg-gray-800"
+              />
+            </div>
+
+            <div class="flex items-start my-4">
+              <label
+                for="terms"
+                class="relative flex items-center h-5 cursor-pointer"
+              >
+                <input
+                  type="checkbox"
+                  checked
+                  id="terms"
+                  class="peer h-5 w-5 transition-all appearance-none rounded border border-emerald-900 checked:bg-emerald-900"
+                />
+
+                <span
+                  class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                >
+                  <i class="fa-solid fa-check"></i>
+                </span>
+              </label>
+              <label for="terms" class="text-sm ms-2"
+                >I agree with the
+                <a href="#" class="capitalize text-emerald-700 underline"
+                  >terms & conditions</a
+                ></label
+              >
+            </div>
+
+            <button
+              class="bg-emerald-900 hover:bg-emerald-800 capitalize rounded-md w-full p-2 text-lg"
+            >
+              submit
+            </button>
+          </form>
+
+          <div class="border-b border-gray-400 text-center">
+            <div
+              class="px-4 inline-block text-sm text-gray-400 bg-gray-900 transform translate-y-1/2"
+            >
+              Or create account with
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4 mt-7">
+            <button
+              class="flex items-center justify-center w-full border-2 border-emerald-900 rounded-md py-1 transition-all hover:bg-gray-800"
+            >
+              <img src="./img/google.png" class="w-6 h-6 mr-2" alt="" />
+              <span>Google</span>
+            </button>
+            <button
+              class="flex items-center justify-center w-full border-2 border-emerald-900 rounded-md py-1 transition-all hover:bg-gray-800"
+            >
+              <img src="./img/apple.png" class="w-6 h-6 mr-2" alt="" />
+              <span>Apple</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- JS File -->
+    <script src="main.js"></script>
+  </body>
+</html>
