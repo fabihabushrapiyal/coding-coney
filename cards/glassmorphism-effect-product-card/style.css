@@ -120,18 +120,6 @@ body {
   cursor: pointer;
 }
 
-.card .size span:hover {
-  background: #7f23f7;
-}
-
-.card .color span {
-  width: 20px;
-  height: 20px;
-  margin: 0 5px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
 .card .color span:nth-child(2) {
   background: #3d294c;
 }
