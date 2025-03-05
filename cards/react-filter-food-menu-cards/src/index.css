@@ -1,0 +1,13 @@
+@import 'tailwindcss';
+
+@layer base {
+  body {
+    @apply bg-white dark:bg-slate-950 text-black dark:text-white;
+  }
+}
+
+@layer components {
+  .active-menu {
+    @apply !border-red-700 !bg-transparent;
+  }
+}
