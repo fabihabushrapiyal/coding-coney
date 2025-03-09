@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-wrapper">
+        <div class="welcome">
+          <div>
+            <h2>welcome back</h2>
+            <p>
+              Lorem ipsum dolor sit amet <br />consectetur adipisicing elit.
+              <br />Error deleniti possimus expedita quidem?
+            </p>
+          </div>
+        </div>
+        <div class="login-form">
+          <form action="#">
+            <div class="input-group">
+              <input type="text" name="username" id="username" required />
+              <label for="username">Username or Email</label>
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="input-group">
+              <input type="password" name="password" id="password" required />
+              <label for="password">Password</label>
+              <i class="fa-solid fa-lock"></i>
+            </div>
+            <button class="btn">log in</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
