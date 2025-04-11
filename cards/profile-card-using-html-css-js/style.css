@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  padding: 10px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #181818;
+  color: #fff;
+}
+
+.card-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 650px;
+  min-height: 350px;
+}
+
+.card {
+  background: #121212;
+  padding: 15px;
+}
+
+.card-1 {
+  position: absolute;
+  width: 260px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  border-radius: 15px;
+  z-index: 10;
+}
+
+.card-1 img {
+  width: 150px;
+  aspect-ratio: 1;
+  border: 2px solid #960025;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px 5px #000;
+}
+
+.card-1 h2 {
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 20px;
+  margin: 10px 0 7px;
+}
+
+.card-1 p {
+  text-transform: capitalize;
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.card-1 .btn {
+  display: block;
+  margin: auto;
+  width: 140px;
+  margin-bottom: 10px;
+  border: 0;
+  outline: 0;
+  text-transform: capitalize;
+  font-size: 18px;
+  padding: 5px;
+  border: 2px solid #960025;
+  background: transparent;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.card-1 .btn:hover {
+  background: #960025;
+}
+
+.card-1 .show-hide-btn {
+  position: absolute;
+  border: 0;
+  outline: 0;
+  background: #121212;
+  width: 30px;
+  height: 40px;
+  color: #fff;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(90deg);
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.card-2 {
+  position: absolute;
+  width: 260px;
+  border-radius: 0 0 15px 15px;
+  left: 50%;
+  /* top: 96%; */
+  top: 0;
+  transform: translateX(-50%);
+  opacity: 0;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.card-2 h3 {
+  margin-top: 8px;
+  text-align: center;
+}
+
+.card-2 h3,
+.card-2 h4 {
+  text-transform: capitalize;
+  font-weight: 600;
+  color: #960025;
+  margin-bottom: 10px;
+}
+
+.card-2 .description {
+  color: #ccc;
+  font-size: 15px;
+}
+
+.card-2 .skills {
+  margin: 12px 0 16px;
+}
+
+.card-2 .skill {
+  margin-bottom: 15px;
+}
+
+.card-2 .skill h6 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  gap: 5px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.card-2 .skill i {
+  font-size: 18px;
+  color: #960025;
+}
+
+.card-2 .skill .bar {
+  text-align: right;
+  background: #960025;
+  height: 5px;
+  width: 0;
+}
+
+.card-2 .skill .bar p {
+  padding-top: 5px;
+}
+
+.card-wrapper.show-details .skill .html {
+  width: 95%;
+  animation: animate-html 3s linear;
+}
+
+.card-wrapper.show-details .skill .css {
+  width: 90%;
+  animation: animate-css 3s linear;
+}
+
+.card-wrapper.show-details .skill .js {
+  width: 75%;
+  animation: animate-js 3s linear;
+}
+
+.card-wrapper.show-details .card-2 {
+  top: 96%;
+  opacity: 1;
+  animation: show-detail-mob 1s linear;
+}
+
+.card-wrapper.hide-details .card-2 {
+  top: 0;
+  opacity: 0;
+  animation: hide-detail-mob 1s linear;
+}
+
+.social-icons a {
+  text-decoration: none;
+}
+
+.social-icons i {
+  color: #960025;
+  font-size: 25px;
+  margin-right: 5px;
+  transition: 0.5s;
+}
+
+.social-icons a:hover i {
+  color: #181818;
+}
+
+/* Responsive Styles */
+@media (min-width: 670px) {
+  .card-wrapper {
+    overflow: hidden;
+  }
+
+  .card-1 .show-hide-btn {
+    right: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: unset;
+  }
+
+  .card-2 {
+    width: 390px;
+    border-radius: 0 15px 15px 0;
+    right: 50%;
+    top: 50%;
+    left: unset;
+    transform: translateY(-50%);
+  }
+
+  .card-2 h3 {
+    margin-top: 0;
+  }
+
+  .card-wrapper.show-details .card-1 {
+    left: 0;
+    transform: translateX(0);
+    animation: to-left 1s linear;
+  }
+
+  .card-wrapper.hide-details .card-1 {
+    left: 50%;
+    transform: translateX(-50%);
+    animation: to-mid 1s linear;
+    animation-delay: 1s;
+    transition-delay: 1s;
+  }
+
+  .card-wrapper.show-details .card-2 {
+    top: 50%;
+    right: 0;
+    opacity: 1;
+    animation: show-detail 1s linear;
+    animation-delay: 1s;
+    transition-delay: 1s;
+  }
+
+  .card-wrapper.hide-details .card-2 {
+    top: 50%;
+    right: 50%;
+    opacity: 0;
+    animation: hide-detail 1s linear;
+  }
+}
+
+/* Animations */
+@keyframes animate-html {
+  from {
+    width: 0;
+  }
+  to {
+    width: 95%;
+  }
+}
+
+@keyframes animate-css {
+  from {
+    width: 0;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+@keyframes animate-js {
+  from {
+    width: 0;
+  }
+  to {
+    width: 75%;
+  }
+}
+
+@keyframes show-detail-mob {
+  from {
+    top: 0;
+    opacity: 0.5;
+  }
+  to {
+    top: 96%;
+  }
+}
+
+@keyframes hide-detail-mob {
+  from {
+    top: 96%;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes to-left {
+  from {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes to-mid {
+  from {
+    left: 0;
+    transform: translateX(0);
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes show-detail {
+  from {
+    right: 50%;
+    opacity: 0.5;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes hide-detail {
+  from {
+    right: 0;
+    opacity: 1;
+  }
+  to {
+    right: 50%;
+  }
+}

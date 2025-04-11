@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card</title>
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card-wrapper">
+      <div class="card card-1">
+        <img src="profile-picture.png" alt="Profile Image" />
+        <h2>sophie montgomery</h2>
+        <p>frontend developer</p>
+        <button class="btn">hire</button><button class="btn">message</button
+        ><button class="show-hide-btn">
+          <i class="fa-solid fa-greater-than"></i>
+        </button>
+      </div>
+
+      <div class="card card-2">
+        <h3>profile details</h3>
+        <p class="description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad at fugit a
+          enim voluptatibus dolore assumenda tenetur aut ea perspiciatis?
+        </p>
+        <div class="skills">
+          <h4>skills</h4>
+          <div class="skill">
+            <h6><i class="fa-brands fa-html5"></i> html5</h6>
+            <div class="bar html">
+              <p>95%</p>
+            </div>
+          </div>
+          <div class="skill">
+            <h6><i class="fa-brands fa-css3-alt"></i> css3</h6>
+            <div class="bar css">
+              <p>90%</p>
+            </div>
+          </div>
+          <div class="skill">
+            <h6><i class="fa-brands fa-js"></i> javascript</h6>
+            <div class="bar js">
+              <p>75%</p>
+            </div>
+          </div>
+        </div>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-square-github"></i></a
+          ><a href="#"><i class="fa-brands fa-linkedin"></i></a
+          ><a href="#"><i class="fa-brands fa-square-x-twitter"></i></a
+          ><a href="#"><i class="fa-brands fa-square-behance"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS File -->
+    <script src="main.js"></script>
+  </body>
+</html>
