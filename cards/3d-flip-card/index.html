@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Flip Card</title>
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="front">
+          <img src="/profile-picture.png" alt="Profile profile-picture" />
+          <h2>John Doe</h2>
+          <p>Frontend Developer</p>
+          <div class="line"></div>
+          <div class="bottom">
+            <div class="rating">
+              <div>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <span>4.6</span>
+            </div>
+            <h3>$50/hr</h3>
+          </div>
+        </div>
+        <div class="back">
+          <h2>Skills</h2>
+          <div class="skills">
+            <div class="skill">
+              <h6><i class="fa-brands fa-html5"></i> html5 %</h6>
+              <div class="bar html">
+                <div class="circle">
+                  <p>95</p>
+                </div>
+              </div>
+            </div>
+            <div class="skill">
+              <h6><i class="fa-brands fa-css3-alt"></i> css3 %</h6>
+              <div class="bar css">
+                <div class="circle">
+                  <p>90</p>
+                </div>
+              </div>
+            </div>
+            <div class="skill">
+              <h6><i class="fa-brands fa-js"></i> javascript %</h6>
+              <div class="bar js">
+                <div class="circle">
+                  <p>75</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul class="social-icons">
+            <li>
+              <a href="#"><i class="fa-brands fa-github-alt"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-behance"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f9eedc;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+h2 {
+  font-size: 30px;
+  text-align: center;
+}
+
+.flip-card {
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: 1s;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 5px 20px 25px rgba(0, 0, 0, 0.5);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.front {
+  background: linear-gradient(150deg, #fbe9bf, #d4c2a7, #c9b090);
+  color: #1c1c1c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.front img {
+  width: 150px;
+  border: 4px solid #1c1c1c;
+  border-radius: 50%;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.5);
+}
+
+.front p {
+  margin-bottom: 20px;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background: #5b5c5b;
+}
+
+.bottom {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.bottom span {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.bottom h3 {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.back {
+  background: linear-gradient(150deg, #313330, #23211f, #1c1c1c);
+  color: #fbe9bf;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  transform: rotateY(180deg);
+}
+
+.skills {
+  margin: 10px 0 16px;
+}
+
+.skill {
+  margin-bottom: 25px;
+}
+
+.skill h6 {
+  margin-bottom: 8px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.bar {
+  position: relative;
+  background: #fbe9bf;
+  height: 5px;
+}
+
+.circle {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background: #fbe9bf;
+  right: -2px;
+  top: -11px;
+  border-radius: 50%;
+  color: #1c1c1c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border: 2px solid #1c1c1c;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.flip-card:hover .html {
+  width: 95%;
+  animation: animate-html 2s linear;
+}
+
+.flip-card:hover .css {
+  width: 90%;
+  animation: animate-css 2s linear;
+}
+
+.flip-card:hover .js {
+  width: 75%;
+  animation: animate-js 2s linear;
+}
+
+@keyframes animate-html {
+  from {
+    width: 0;
+  }
+  to {
+    width: 95%;
+  }
+}
+
+@keyframes animate-css {
+  from {
+    width: 0;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+@keyframes animate-js {
+  from {
+    width: 0;
+  }
+  to {
+    width: 75%;
+  }
+}
+
+.social-icons {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-icons li {
+  background: #fbe9bf;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.flip-card:hover .social-icons li {
+  animation: animate-social-i 1.2s linear;
+}
+
+.flip-card:hover .social-icons li:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.flip-card:hover .social-icons li:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.flip-card:hover .social-icons li:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.social-icons a {
+  text-decoration: none;
+  display: grid;
+  place-items: center;
+}
+
+.social-icons i {
+  color: #1c1c1c;
+  font-size: 18px;
+  transition: 0.5s;
+}
+
+.social-icons li:hover {
+  background: #1c1c1c;
+}
+
+.social-icons li:hover i {
+  color: #fbe9bf;
+}
+
+@keyframes animate-social-i {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
