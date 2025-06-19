@@ -1,0 +1,138 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-sg-pink: #d73d83;
+}
+
+@keyframes scale-up {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Animations for PC & Tab */
+@keyframes up {
+  from {
+    bottom: -100%;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+@keyframes hide-up {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: 100%;
+  }
+}
+
+@keyframes down {
+  from {
+    bottom: 100%;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+@keyframes hide-down {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: -100%;
+  }
+}
+
+/* Animations for Mobile */
+@keyframes to-left {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes hide-left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes to-right {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes hide-right {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@layer base {
+  a {
+    @apply capitalize underline text-sg-pink;
+  }
+}
+
+@layer components {
+  /* For Signin Button */
+  #wrapper.active-signin #signupImg {
+    @apply md:animate-[hide-up_3s_linear] md:bottom-full md:left-0 animate-[hide-left_3s_linear] -left-full;
+  }
+
+  #wrapper.active-signin #signinImg {
+    @apply md:animate-[up_3s_linear] md:bottom-0 animate-[to-left_3s_linear] left-0;
+  }
+
+  #wrapper.active-signin #signupForm {
+    @apply md:animate-[hide-down_3s_linear] md:-bottom-full md:left-0 animate-[hide-right_3s_linear] left-full;
+  }
+
+  #wrapper.active-signin #signinForm {
+    @apply md:animate-[down_3s_linear] md:bottom-0 animate-[to-right_3s_linear] left-0;
+  }
+
+  /* For Signup Button */
+  #wrapper.active-signup #signupImg {
+    @apply md:animate-[down_3s_linear] md:bottom-0 animate-[to-right_3s_linear] left-0;
+  }
+
+  #wrapper.active-signup #signinImg {
+    @apply md:animate-[hide-down_3s_linear] md:-bottom-full animate-[hide-right_3s_linear] left-full;
+  }
+
+  #wrapper.active-signup #signupForm {
+    @apply md:animate-[up_3s_linear] md:bottom-0 animate-[to-left_3s_linear] left-0;
+  }
+
+  #wrapper.active-signup #signinForm {
+    @apply md:animate-[hide-up_3s_linear] md:bottom-full animate-[hide-left_3s_linear] -left-full;
+  }
+
+  .label-style {
+    @apply block capitalize mb-2;
+  }
+
+  .input-style {
+    @apply w-full rounded-md px-2 py-1 focus:outline-none border border-sg-pink bg-transparent;
+  }
+}
