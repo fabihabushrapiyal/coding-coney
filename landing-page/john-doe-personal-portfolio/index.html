@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <nav class="navbar">
+        <div class="container navbar-container">
+          <a href="#" class="logo"><img src="./img/logo.png" alt="Logo" /></a>
+          <ul class="nav-list">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#testimonial">Testimonial</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <button class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero" id="hero">
+        <div class="container hero-container">
+          <div class="hero-text">
+            <h1>Hello, I'm John Doe</h1>
+            <p>A professional <br /><span>Frontend Developer</span></p>
+            <p>Discover my projects and skills</p>
+            <a href="#projects"><button class="btn">View Projects</button></a>
+          </div>
+          <div class="hero-image">
+            <img src="./img/john-doe.png" alt="John Doe" />
+            <div class="experience">
+              <h3 id="yearNum">9+</h3>
+              <p>years<br />experience</p>
+            </div>
+          </div>
+          <ul class="social-icons">
+            <li>
+              <a href="#"><i class="fa-brands fa-github-alt"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-behance"></i></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section class="section-padding">
+        <div class="container skills-container">
+          <h2 class="sub-heading">skills</h2>
+          <div class="skills-list">
+            <div class="skill-item">
+              <i class="fa-brands fa-html5"></i>
+              <p>HTML</p>
+            </div>
+            <div class="skill-item">
+              <i class="fa-brands fa-css3-alt"></i>
+              <p>CSS</p>
+            </div>
+            <div class="skill-item">
+              <i class="fa-brands fa-js"></i>
+              <p>JavaScript</p>
+            </div>
+            <div class="skill-item">
+              <i class="fa-brands fa-react"></i>
+              <p>React</p>
+            </div>
+            <div class="skill-item">
+              <i class="fa-brands fa-bootstrap"></i>
+              <p>Bootstrap</p>
+            </div>
+            <div class="skill-item">
+              <i class="fa-brands fa-sass"></i>
+              <p>Sass</p>
+            </div>
+            <div class="skill-item">
+              <i class="fa-brands fa-git-alt"></i>
+              <p>Git</p>
+            </div>
+            <div class="skill-item">
+              <i class="fa-brands fa-github-alt"></i>
+              <p>GitHub</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="section-padding" id="about">
+        <div class="container about-container">
+          <div class="about-images">
+            <img src="./img/about-image.jpg" alt="About Image" />
+            <img src="./img/about-image-sm.jpg" alt="" />
+          </div>
+          <div class="about-text">
+            <h2 class="sub-heading">who am i</h2>
+            <p>
+              I'm a passionate Frontend Developer with a knack for creating
+              beautiful and functional websites
+            </p>
+            <p>
+              I have a strong foundation in HTML, CSS, and JavaScript, and I
+              love to learn new technologies and frameworks. I enjoy working on
+              projects that challenge me and allow me to grow as a developer.
+            </p>
+            <p>
+              When I'm not coding, you can find me hiking in the mountains or
+              experimenting with new recipes in the kitchen. I believe that a
+              healthy work-life balance is essential for creativity and
+              productivity.
+            </p>
+            <div class="incr-box">
+              <div>
+                <h3 id="projects-count">340+</h3>
+                <p>Projects</p>
+              </div>
+              <div>
+                <h3 id="clients-count">200+</h3>
+                <p>Happy Clients</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Project Section -->
+      <section class="section-padding" id="projects">
+        <div class="container project-container">
+          <h2 class="sub-heading">My projects</h2>
+          <p class="project-intro">
+            Here are some of the projects I have worked on recently. I have
+            worked on a variety of projects, from small personal websites to
+            large-scale applications. My goal is to create responsive and
+            user-friendly interfaces that provide a great user experience.
+          </p>
+          <div class="project-list">
+            <div class="project-item">
+              <img src="./img/project-1.png" alt="Project 1" />
+              <div class="project-info">
+                <h3>project title 1</h3>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Debitis obcaecati molestiae at aliquid, hic officiis?
+                </p>
+                <a href="#" class="prev-link"
+                  >Live Preview <i class="fa-solid fa-globe"></i></a
+                ><a href="#" class="code-link"
+                  >Code <i class="fa-brands fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <div class="project-item">
+              <img src="./img/project-2.png" alt="Project 2" />
+              <div class="project-info">
+                <h3>project title 2</h3>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Debitis obcaecati molestiae at aliquid, hic officiis?
+                </p>
+                <a href="#" class="prev-link"
+                  >Live Preview <i class="fa-solid fa-globe"></i></a
+                ><a href="#" class="code-link"
+                  >Code <i class="fa-brands fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <div class="project-item">
+              <img src="./img/project-3.png" alt="Project 3" />
+              <div class="project-info">
+                <h3>project title 3</h3>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Debitis obcaecati molestiae at aliquid, hic officiis?
+                </p>
+                <a href="#" class="prev-link"
+                  >Live Preview <i class="fa-solid fa-globe"></i></a
+                ><a href="#" class="code-link"
+                  >Code <i class="fa-brands fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <div class="project-item">
+              <img src="./img/project-4.png" alt="Project 4" />
+              <div class="project-info">
+                <h3>project title 4</h3>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Debitis obcaecati molestiae at aliquid, hic officiis?
+                </p>
+                <a href="#" class="prev-link"
+                  >Live Preview <i class="fa-solid fa-globe"></i></a
+                ><a href="#" class="code-link"
+                  >Code <i class="fa-brands fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <div class="project-item">
+              <img src="./img/project-5.png" alt="Project 5" />
+              <div class="project-info">
+                <h3>project title 5</h3>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Debitis obcaecati molestiae at aliquid, hic officiis?
+                </p>
+                <a href="#" class="prev-link"
+                  >Live Preview <i class="fa-solid fa-globe"></i></a
+                ><a href="#" class="code-link"
+                  >Code <i class="fa-brands fa-github"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonial Section -->
+      <section class="section-padding" id="testimonial">
+        <div class="container">
+          <h2 class="sub-heading">what clients say</h2>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="img-box"><img src="./img/man-1.jpg" alt="" /></div>
+                <p class="testimonial-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptates qui temporibus aut, illum sunt nihil quidem ab
+                  voluptatibus libero vero ut inventore illo debitis ipsum
+                  deleniti laboriosam, impedit expedita voluptatem.
+                </p>
+                <hr />
+                <h3>henry mitchell</h3>
+                <p class="profession">Marketing Manager</p>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-box"><img src="./img/man-2.jpg" alt="" /></div>
+                <p class="testimonial-text">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Consequatur, sed necessitatibus ipsum laborum consequuntur
+                  dignissimos pariatur quasi velit magni doloremque!
+                </p>
+                <hr />
+                <h3>henry mitchell</h3>
+                <p class="profession">Marketing Manager</p>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-box"><img src="./img/man-3.jpg" alt="" /></div>
+                <p class="testimonial-text">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed
+                  odio sequi consequuntur aspernatur, reiciendis voluptatum quo
+                  inventore facere unde est.
+                </p>
+                <hr />
+                <h3>henry mitchell</h3>
+                <p class="profession">Marketing Manager</p>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-box"><img src="./img/man-4.jpg" alt="" /></div>
+                <p class="testimonial-text">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Laudantium illo rem corrupti eligendi eveniet ipsa
+                  praesentium, inventore voluptate. Aut consectetur rerum alias
+                  quod? Id, dolore?
+                </p>
+                <hr />
+                <h3>henry mitchell</h3>
+                <p class="profession">Marketing Manager</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="section-padding contact-bg" id="contact">
+        <div class="container contact-container">
+          <h2 class="sub-heading">
+            let's make something<br />
+            amaizing together
+          </h2>
+          <form class="contact-form">
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter Your Email"
+              required
+            />
+            <button type="submit" class="contact-btn">Start</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="section-padding">
+      <div class="container">
+        <a href="#" class="logo"><img src="/img/logo.png" alt="Logo" /></a>
+        <ul class="footer-icons">
+          <li>
+            <a href="#"><i class="fa-brands fa-github-alt"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-behance"></i></a>
+          </li>
+        </ul>
+        <ul class="footer-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#testimonial">Testimonial</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <p class="copyright">
+          &copy; 2025 <a href="#">John Doe</a>. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- JS File -->
+    <script src="main.js"></script>
+  </body>
+</html>
