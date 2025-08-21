@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up & Log in Forms</title>
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="initial-btns" id="initialBtns">
+        <button class="initial-btn" id="signupBtn">
+          <i class="fa-solid fa-user-plus"></i> Sign Up
+        </button>
+        <button class="initial-btn" id="loginBtn">
+          <i class="fa-solid fa-user"></i> Log In
+        </button>
+      </div>
+
+      <div class="wrapper signup" id="signupContainer">
+        <div class="image-section">
+          <button class="back-btn">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <div class="image-content">
+            <h2>Join Us Today!</h2>
+            <p>
+              Create your account and start your amazing journey with us.
+              Experience the best services tailored just for you.
+            </p>
+          </div>
+        </div>
+        <div class="form-section">
+          <div class="form-header">
+            <h3>Create Account</h3>
+            <p>
+              Fill in your details to get started. Already have an account?
+              <a href="#" id="loginLink">Log In</a>
+            </p>
+          </div>
+          <form>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" name="email" id="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" required />
+            </div>
+
+            <div class="form-group">
+              <label for="confirmPassword">Confirm Password</label>
+              <input
+                type="password"
+                name="confirmPassword"
+                id="confirmPassword"
+                required
+              />
+            </div>
+
+            <button type="submit" class="submit-btn">Create Account</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="wrapper login" id="loginContainer">
+        <div class="image-section">
+          <button class="back-btn">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <div class="image-content">
+            <h2>Welcome Back!</h2>
+            <p>
+              We're excited to see you again. Sign in to access your account and
+              continue your journey with us.
+            </p>
+          </div>
+        </div>
+        <div class="form-section">
+          <div class="form-header">
+            <h3>Log In</h3>
+            <p>
+              Log in to your account. Don't have an account?
+              <a href="#" id="signupLink">Sign Up</a>
+            </p>
+          </div>
+          <form>
+            <div class="form-group">
+              <label for="loginEmail">Email Address</label>
+              <input type="email" name="email" id="loginEmail" required />
+            </div>
+
+            <div class="form-group">
+              <label for="loginPassword">Password</label>
+              <input
+                type="password"
+                name="password"
+                id="loginPassword"
+                required
+              />
+            </div>
+
+            <button type="submit" class="submit-btn">Log In</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS File -->
+    <script src="main.js"></script>
+  </body>
+</html>
