@@ -1,0 +1,24 @@
+@import 'tailwindcss';
+
+@layer base {
+  body {
+    @apply bg-gray-100 text-gray-900 dark:bg-gray-950
+        dark:text-gray-100;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply capitalize font-semibold;
+  }
+}
+
+@layer components {
+  .wrapper {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .text-clr {
+    @apply text-gray-600 dark:text-gray-300;
+  }
+}
