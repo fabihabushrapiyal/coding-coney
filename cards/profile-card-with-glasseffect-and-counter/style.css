@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: 'Inter', sans-serif;
+  background: #0a0a0a;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Glass Profile Card */
+.card-wrapper {
+  position: relative;
+  padding: 20px;
+}
+
+.profile-card {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 0 80px rgba(102, 126, 234, 0.1);
+  animation: cardEntrance 0.8s linear;
+}
+
+/* Profile Picture */
+.profile-pic-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+}
+
+.profile-pic {
+  position: relative;
+}
+
+.profile-pic img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile-pic::after {
+  content: '';
+  position: absolute;
+  width: 128px;
+  height: 128px;
+  inset: -4px;
+  border-radius: 50%;
+  background: linear-gradient(
+    45deg,
+    #2e48c1,
+    #8a4beb,
+    #a532b1,
+    #e93434,
+    #2e48c1
+  );
+  background-size: 400% 400%;
+  z-index: -1;
+  animation: gradientRotate 2s ease infinite;
+}
+
+.online-status {
+  position: absolute;
+  right: 0;
+  bottom: 8px;
+  width: 24px;
+  height: 24px;
+  background: #4ade80;
+  border-radius: 50%;
+  border: 1px solid #0a0a0a;
+  animation: pulse 2s infinite;
+}
+
+/* Bookmark Button */
+.bookmark-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background: transparent;
+  font-size: 22px;
+  color: #4ade80;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.bookmark-btn:hover {
+  color: #10b981;
+}
+
+/* User Info */
+.user-info {
+  text-align: center;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 3px;
+  text-transform: capitalize;
+}
+
+.username {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 15px;
+}
+
+.description {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+}
+
+/* Statistics */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-block: 25px;
+  padding-block: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-item {
+  text-align: center;
+  flex: 1;
+}
+
+.stat-icon {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.stat-icon i.fa-file-code {
+  color: #24e9fb;
+}
+
+.stat-icon i.fa-users {
+  color: #8a4beb;
+}
+
+.stat-icon i.fa-heart {
+  color: #e93434;
+}
+
+.stat-number {
+  font-size: 20px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+}
+
+/* Action Buttons */
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  flex: 1;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  color: inherit;
+  letter-spacing: 1px;
+  position: relative;
+  transform: scale(0.96);
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  transform: scale(1);
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.4),
+    transparent 70%
+  );
+  transition: 0.5s;
+}
+
+.btn:hover::before {
+  left: -100%;
+}
+
+.message-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.message-btn:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.follow-btn {
+  background: linear-gradient(135deg, #2e48c1, #8a4beb);
+}
+
+.follow-btn:hover {
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.follow-btn.following {
+  background: linear-gradient(135deg, #10b981, #04825a);
+}
+
+.follow-btn.following:hover {
+  box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);
+}
+
+/* Background Circle */
+.bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  animation: scaleup 8s ease-in-out infinite;
+}
+
+.bg-circle-1 {
+  background: #2e48c1;
+  top: -10%;
+  left: -10%;
+}
+
+.bg-circle-2 {
+  background: #a532b1;
+  bottom: -10%;
+  right: -10%;
+}
+
+/* Animations */
+/* Profile Picture Border */
+@keyframes gradientRotate {
+  0% {
+    background-position: 0% 50%;
+    transform: rotate(0deg);
+  }
+
+  50% {
+    background-position: 100% 50%;
+    transform: rotate(180deg);
+  }
+
+  100% {
+    background-position: 0% 50%;
+    transform: rotate(360deg);
+  }
+}
+
+/* Online Status Pulse */
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
+  }
+
+  50% {
+    box-shadow: 0 0 0 10px rgba(74, 222, 128, 0);
+  }
+}
+
+/* Background Circle Scale Up */
+@keyframes scaleup {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Card Entrance */
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

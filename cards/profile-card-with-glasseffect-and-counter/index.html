@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card</title>
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card-wrapper">
+      <!-- Background Circles -->
+      <div class="bg-circle bg-circle-1"></div>
+      <div class="bg-circle bg-circle-2"></div>
+
+      <!-- Profile Card -->
+      <div class="profile-card">
+        <!-- Profile Pic with Animated Border -->
+        <div class="profile-pic-container">
+          <div class="profile-pic">
+            <img src="profilr-picture.jpg" alt="Profile Picture" />
+          </div>
+          <div class="online-status"></div>
+        </div>
+
+        <!-- Bookmark Button -->
+        <button class="bookmark-btn">
+          <i class="fa-solid fa-bookmark"></i>
+        </button>
+
+        <!-- User Info -->
+        <div class="user-info">
+          <h2 class="name">john doe</h2>
+          <p class="username">@johndoe_dev</p>
+          <p class="description">
+            Frontend Developer | Tech Enthusiast | Coffee Lover
+          </p>
+        </div>
+
+        <!-- Statistics -->
+        <div class="stats">
+          <div class="stat-item">
+            <div class="stat-icon"><i class="fa-solid fa-file-code"></i></div>
+            <span class="stat-number" data-target="478">478</span
+            ><span class="stat-label">Projects</span>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+            <span class="stat-number" data-target="120">120</span
+            ><span class="stat-label">Clients</span>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-icon"><i class="fa-solid fa-heart"></i></div>
+            <span class="stat-number" data-target="5247">5247</span
+            ><span class="stat-label">Followers</span>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="buttons">
+          <button class="btn message-btn">Message</button
+          ><button class="btn follow-btn following">Follow</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS File -->
+    <script src="main.js"></script>
+  </body>
+</html>
