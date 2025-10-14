@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechShop</title>
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Swiper.js CSS Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Top text -->
+    <div class="top-p">
+      <p>20% off on all kinds of device.<a href="#">shop now</a></p>
+    </div>
+
+    <!-- Header -->
+    <header>
+      <div class="header-container" id="header">
+        <div class="container">
+          <nav class="nav-bar">
+            <a href="#" class="logo"
+              ><img src="img/logo.png" alt="TechShop Logo"
+            /></a>
+
+            <button class="menu-toggle-btn"><i class="fas fa-bars"></i></button>
+
+            <ul class="nav-links" id="navLinks">
+              <li><a href="#hero" class="active-link">home</a></li>
+              <li><a href="#products">products</a></li>
+              <li><a href="#featured">featured</a></li>
+              <li><a href="#blogs">blogs</a></li>
+            </ul>
+
+            <div class="nav-btns">
+              <a href="#" class="search-btn"><i class="fas fa-search"></i></a>
+
+              <a href="#" class="cart-btn"
+                ><i class="fas fa-shopping-cart"></i
+              ></a>
+
+              <button class="btn log-in">log in</button>
+
+              <button class="btn sign-up">sign up</button>
+            </div>
+
+            <div class="mob-nav-menu">
+              <ul class="nav-links" id="mobNavLinks">
+                <li><a href="#hero" class="active-link">home</a></li>
+                <li><a href="#products">products</a></li>
+                <li><a href="#featured">featured</a></li>
+                <li><a href="#blogs">blogs</a></li>
+              </ul>
+
+              <div class="nav-btns">
+                <a href="#" class="search-btn"><i class="fas fa-search"></i></a>
+
+                <a href="#" class="cart-btn"
+                  ><i class="fas fa-shopping-cart"></i
+                ></a>
+
+                <button class="btn log-in">log in</button>
+
+                <button class="btn sign-up">sign up</button>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main>
+      <!-- Hero -->
+      <section id="hero">
+        <div class="container hero-content">
+          <div class="hero-text">
+            <h1><span>20% off</span> on all electronics</h1>
+
+            <p>
+              Discover the latest in electronics with our premium selection of
+              devices and accessories
+            </p>
+
+            <button class="btn shop-now">shop now</button>
+          </div>
+
+          <div class="hero-img">
+            <img src="img/hero-img.png" alt="Hero Image" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Categories -->
+      <section class="section-container">
+        <div class="container">
+          <div class="sub-heading">
+            <span>categories</span>
+            <h2>browse by categories</h2>
+          </div>
+
+          <div class="categories">
+            <div class="category-card">
+              <a href="#" class="category-icon"
+                ><img src="img/iphone-icon.png" alt=""
+              /></a>
+              <h3>iPhone</h3>
+            </div>
+
+            <div class="category-card">
+              <a href="#" class="category-icon"
+                ><img src="img/game-controller-icon.png" alt=""
+              /></a>
+              <h3>game controller</h3>
+            </div>
+
+            <div class="category-card">
+              <a href="#" class="category-icon"
+                ><img src="img/airpod-icon.png" alt=""
+              /></a>
+              <h3>air pod</h3>
+            </div>
+
+            <div class="category-card">
+              <a href="#" class="category-icon"
+                ><img src="img/smart-watch-icon.png" alt=""
+              /></a>
+              <h3>smart watch</h3>
+            </div>
+
+            <div class="category-card">
+              <a href="#" class="category-icon"
+                ><img src="img/headphone-icon.png" alt=""
+              /></a>
+              <h3>headphone</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Products -->
+      <section class="section-container" id="products">
+        <div class="container">
+          <div class="sub-heading">
+            <span>products</span>
+            <h2>discover our products</h2>
+          </div>
+
+          <!-- Swiper nav -->
+          <div class="carousel-nav">
+            <div class="swiper-button-prev">
+              <i class="fas fa-arrow-left"></i>
+            </div>
+            <div class="swiper-button-next">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+
+          <!-- Swiper -->
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="card-img">
+                    <img src="img/product-1.png" alt="" />
+                  </div>
+
+                  <div class="card-body">
+                    <h3>iPhone 17 pro max</h3>
+
+                    <div class="ratting">
+                      <span
+                        ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                        ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                        ><i class="fas fa-star-half-stroke"></i></span
+                      ><span class="rating-num">(137)</span>
+                    </div>
+
+                    <p class="price">$299.00</p>
+
+                    <div class="btns">
+                      <button class="btn">buy now</button
+                      ><button title="Add to Card" class="rounded-btn">
+                        <i class="fas fa-cart-shopping"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="card-img">
+                    <img src="img/product-2.png" alt="" />
+                  </div>
+
+                  <div class="card-body">
+                    <h3>pink earbuds</h3>
+
+                    <div class="ratting">
+                      <span
+                        ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                        ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                        ><i class="fas fa-star-half-stroke"></i></span
+                      ><span class="rating-num">(137)</span>
+                    </div>
+
+                    <p class="price">$199.00</p>
+
+                    <div class="btns">
+                      <button class="btn">buy now</button
+                      ><button title="Add to Card" class="rounded-btn">
+                        <i class="fas fa-cart-shopping"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="card-img">
+                    <img src="img/product-3.png" alt="" />
+                  </div>
+
+                  <div class="card-body">
+                    <h3>gamepad</h3>
+
+                    <div class="ratting">
+                      <span
+                        ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                        ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                        ><i class="fas fa-star-half-stroke"></i></span
+                      ><span class="rating-num">(137)</span>
+                    </div>
+
+                    <p class="price">$153.60</p>
+
+                    <div class="btns">
+                      <button class="btn">buy now</button
+                      ><button title="Add to Card" class="rounded-btn">
+                        <i class="fas fa-cart-shopping"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="card-img">
+                    <img src="img/product-4.png" alt="" />
+                  </div>
+
+                  <div class="card-body">
+                    <h3>smart watch</h3>
+
+                    <div class="ratting">
+                      <span
+                        ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                        ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                        ><i class="fas fa-star-half-stroke"></i></span
+                      ><span class="rating-num">(137)</span>
+                    </div>
+
+                    <p class="price">$185.30</p>
+
+                    <div class="btns">
+                      <button class="btn">buy now</button
+                      ><button title="Add to Card" class="rounded-btn">
+                        <i class="fas fa-cart-shopping"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="card-img">
+                    <img src="img/product-5.png" alt="" />
+                  </div>
+
+                  <div class="card-body">
+                    <h3>pink headphone</h3>
+
+                    <div class="ratting">
+                      <span
+                        ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                        ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                        ><i class="fas fa-star-half-stroke"></i></span
+                      ><span class="rating-num">(137)</span>
+                    </div>
+
+                    <p class="price">$149.00</p>
+
+                    <div class="btns">
+                      <button class="btn">buy now</button
+                      ><button title="Add to Card" class="rounded-btn">
+                        <i class="fas fa-cart-shopping"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="card-img">
+                    <img src="img/product-6.png" alt="" />
+                  </div>
+
+                  <div class="card-body">
+                    <h3>black headphone</h3>
+
+                    <div class="ratting">
+                      <span
+                        ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                        ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                        ><i class="fas fa-star-half-stroke"></i></span
+                      ><span class="rating-num">(137)</span>
+                    </div>
+
+                    <p class="price">$172.00</p>
+
+                    <div class="btns">
+                      <button class="btn">buy now</button
+                      ><button title="Add to Card" class="rounded-btn">
+                        <i class="fas fa-cart-shopping"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured -->
+      <section class="section-container" id="featured">
+        <div class="container">
+          <div class="sub-heading">
+            <span>featured</span>
+            <h2>new arrival</h2>
+          </div>
+
+          <div class="grid-container">
+            <div class="grid-item featured-item">
+              <img src="/img/featured-product-1.jpg" alt="" />
+              <div class="featured-content">
+                <h3>play station 5</h3>
+                <p>
+                  Experience next-gen gaming with the PlayStation 5, featuring
+                  stunning graphics and lightning-fast load times.
+                </p>
+                <p class="price">$499.00</p>
+                <button class="btn">shop now</button>
+              </div>
+            </div>
+
+            <div class="grid-item featured-item">
+              <img src="/img/featured-product-2.jpg" alt="" />
+              <div class="featured-content">
+                <h3>gaming headphone</h3>
+                <p>
+                  Immerse yourself in high-quality sound with our latest gaming
+                  headphones.
+                </p>
+                <p class="price">$199.00</p>
+                <button class="btn">shop now</button>
+              </div>
+            </div>
+
+            <div class="grid-item featured-item">
+              <img src="/img/featured-product-3.jpg" alt="" />
+              <div class="featured-content">
+                <h3>HomePod and HomePod mini</h3>
+                <p>Experience immersive sound with HomePod and HomePod mini.</p>
+                <p class="price">$199.00 - $299.00</p>
+                <button class="btn">shop now</button>
+              </div>
+            </div>
+
+            <div class="grid-item featured-item">
+              <img src="/img/featured-product-4.jpg" alt="" />
+              <div class="featured-content">
+                <h3>laptop</h3>
+                <p>
+                  Power through your tasks with our sleek and powerful laptops.
+                </p>
+                <p class="price">$690.00</p>
+                <button class="btn">shop now</button>
+              </div>
+            </div>
+
+            <div class="grid-item featured-item">
+              <img src="/img/featured-product-5.jpg" alt="" />
+              <div class="featured-content">
+                <h3>wireless mechanical keyboard</h3>
+                <p>
+                  Elevate your typing experience with our wireless mechanical
+                  keyboard.
+                </p>
+                <p class="price">$144.29</p>
+                <button class="btn">shop now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Blogs -->
+      <section class="section-container" id="blogs">
+        <div class="container">
+          <div class="sub-heading">
+            <span>blogs</span>
+            <h2>latest news</h2>
+          </div>
+
+          <div class="grid-container">
+            <div class="grid-item blog-item">
+              <img src="/img/blog-1.jpg" alt="" />
+              <div class="blog-content">
+                <h3>Top 10 Must-Have Accessories for Your New iPhone</h3>
+                <p>
+                  Discover the essential accessories that will enhance your
+                  iPhone experience in 2023.
+                </p>
+                <a href="#" class="read-more">read more</a>
+              </div>
+            </div>
+
+            <div class="grid-item blog-item">
+              <img src="/img/blog-2.jpg" alt="" />
+              <div class="blog-content">
+                <h3>How to Choose the Perfect Laptop for Your Needs</h3>
+                <p>
+                  A comprehensive guide to help you select the ideal laptop for
+                  work, gaming, or everyday use.
+                </p>
+                <a href="#" class="read-more">read more</a>
+              </div>
+            </div>
+
+            <div class="grid-item blog-item">
+              <img src="/img/blog-3.jpg" alt="" />
+              <div class="blog-content">
+                <h3>The Future of Wearable Tech: What to Expect in 2024</h3>
+                <p>
+                  Explore the latest trends and innovations in wearable
+                  technology set to shape the future.
+                </p>
+                <a href="#" class="read-more">read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Facilities -->
+      <section class="section-container">
+        <div class="container">
+          <div class="facilities">
+            <div class="facility-item">
+              <div class="icon"><i class="fas fa-truck-fast"></i></div>
+              <h3>Free Shipping</h3>
+              <p>
+                Enjoy free shipping on all orders over 150. Fast and reliable
+                delivery to your doorstep.
+              </p>
+            </div>
+
+            <div class="facility-item">
+              <div class="icon"><i class="fas fa-headset"></i></div>
+              <h3>24/7 Support</h3>
+              <p>
+                Our dedicated support team is available around the clock to
+                assist you with any inquiries or issues.
+              </p>
+            </div>
+
+            <div class="facility-item">
+              <div class="icon"><i class="fas fa-hand-holding-dollar"></i></div>
+              <h3>Money Back Guarantee</h3>
+              <p>
+                Not satisfied with your purchase? We offer a 30-day money-back
+                guarantee for your peace of mind.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-content">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <a href="#" class="footer-logo"
+              ><img src="/img/logo.png" alt="Logo"
+            /></a>
+            <p>123, New York, USA</p>
+            <p>+1 234 567 890</p>
+            <p>techshop@email.com</p>
+          </div>
+
+          <div class="footer-column">
+            <h3>quick links</h3>
+            <ul class="footer-links">
+              <li><a href="#">about us</a></li>
+              <li><a href="#">services</a></li>
+              <li><a href="#">support</a></li>
+              <li><a href="#">why us</a></li>
+              <li><a href="#">privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>subscribe</h3>
+            <form class="subscribe-form">
+              <input type="email" placeholder="Enter Your Email" />
+              <button>
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </form>
+          </div>
+
+          <div class="footer-column">
+            <h3>connect</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>© <span id="currentYear"></span> TechShop. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Swiper.js JS Link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <!-- JS File -->
+    <script src="main.js"></script>
+  </body>
+</html>
