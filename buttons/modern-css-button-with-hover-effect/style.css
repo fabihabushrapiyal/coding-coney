@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.btn {
+  padding: 1em 3em;
+  font-size: 1.2em;
+  border-radius: 3.5em;
+  border: 0.25em solid #c29ff6;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+  color: #fff;
+  background: radial-gradient(#390a85 30%, #ddcafa);
+  transition: 0.5s;
+}
+
+.btn:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.45);
+  scale: 1.1;
+}
