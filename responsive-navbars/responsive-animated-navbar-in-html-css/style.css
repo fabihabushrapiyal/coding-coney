@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+  height: 100vh;
+  background: url(/img/bg.jpg) no-repeat center center/cover;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-inline: 20px;
+}
+
+.navbar {
+  position: relative;
+  background: #701102;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 8px;
+  border-radius: 50px;
+  animation: stretchNav 1s linear;
+}
+
+.logo {
+  display: grid;
+  place-items: center;
+  padding-block: 5px;
+  margin-right: 10px;
+}
+
+.logo img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list a {
+  display: block;
+  padding: 16px 22px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.nav-list a:hover,
+.nav-list a.active-link {
+  background: #851301;
+}
+
+.btns {
+  display: flex;
+  gap: 20px;
+}
+
+.sign-up-btn {
+  padding: 6px 28px;
+  font-size: 1rem;
+  background: #f38200;
+  color: #fff;
+  border: 2px solid #f38200;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.sign-up-btn:hover {
+  background: transparent;
+}
+
+.menu-toggle-btn {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.menu-toggle-btn:hover {
+  color: #f38200;
+}
+
+.menu-toggle-btn {
+  display: none;
+}
+
+/* Responsive CSS */
+@media (max-width: 767px) {
+  .header-container {
+    padding-top: 40px;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    background: inherit;
+    border-radius: 0 0 12px 12px;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+  }
+
+  .navbar.mob-nav-active {
+    border-radius: 12px 12px 0 0;
+    isolation: isolate;
+  }
+
+  .navbar.mob-nav-active .nav-list {
+    top: 100%;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu-toggle-btn {
+    display: block;
+  }
+}
+
+/* Animation */
+@keyframes stretchNav {
+  0% {
+    transform: scaleX(0);
+  }
+  40% {
+    transform: scaleX(1.2);
+  }
+  70% {
+    transform: scaleX(0.7);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
