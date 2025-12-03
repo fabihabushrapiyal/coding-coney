@@ -1,0 +1,234 @@
+:root {
+  color-scheme: light dark;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  padding: 20px;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: light-dark(#f0f0f0, #111);
+  color: light-dark(#111, #f0f0f0);
+}
+
+.card {
+  max-width: 850px;
+}
+
+.card-image,
+.card-body {
+  padding: 20px;
+}
+
+.card-image {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+  border-radius: 24px 24px 0 0;
+  background: linear-gradient(to bottom, #0733b7, #3861db);
+  overflow: hidden;
+  z-index: 100;
+}
+
+.card-image img {
+  width: 100%;
+  object-fit: cover;
+  filter: drop-shadow(0 6px 6px #202020);
+}
+
+.card-image::after {
+  content: 'Air Jordan';
+  position: absolute;
+  font-size: clamp(2rem, 10vw, 4rem);
+  font-weight: 600;
+  bottom: 10px;
+  right: 20px;
+  color: rgba(4, 18, 81, 0.487);
+  z-index: -1;
+}
+
+.card-body {
+  border-radius: 0 0 24px 24px;
+  margin-inline: 10px;
+  background: light-dark(#dfe6fa, #030d2c);
+  box-shadow: 0 4px 10px light-dark(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+  animation: slidToDown 1.3s linear;
+}
+
+.title {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.rating {
+  margin-bottom: 10px;
+}
+
+.rating i {
+  color: #ffb609;
+  margin-right: 2px;
+  font-size: 0.9rem;
+}
+
+.reviews {
+  color: #7f7f7f;
+  font-size: 0.8rem;
+}
+
+hr {
+  height: 2px;
+  background: light-dark(#bacbf8, #1a1a38);
+  border: none;
+}
+
+.pricing {
+  margin-top: 15px;
+}
+
+.current-price {
+  font-size: 2rem;
+  margin-right: 4px;
+}
+
+.current-price sup {
+  font-size: 0.9rem;
+}
+
+.discount {
+  color: #f41717;
+  font-size: 1.3rem;
+}
+
+.original-price {
+  margin-top: 5px;
+  color: #7f7f7f;
+  font-size: 0.9rem;
+}
+
+.original-price span {
+  text-decoration: line-through;
+}
+
+.size {
+  margin-block: 15px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.size span {
+  padding: 6px 15px;
+  border-radius: 5px;
+  background: light-dark(#9fb4f2, #04123e);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.size span:hover,
+.size span.active {
+  background: light-dark(#8da6f4, #030d2c);
+}
+
+.size span.active {
+  border: 1px solid light-dark(#050505, #bbcbfe);
+}
+
+.description {
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: light-dark(#555, #808080);
+}
+
+.action-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.btn {
+  flex: 1;
+  min-width: fit-content;
+  padding: 8px 16px;
+  font-family: inherit;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  border: 2px solid #3861db;
+  outline: 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.cart-btn {
+  background: #3861db;
+}
+
+.buy-btn {
+  background: transparent;
+}
+
+.cart-btn:hover {
+  background: transparent;
+}
+
+.buy-btn:hover {
+  background: #3861db;
+}
+
+/* Responsive CSS */
+@media (min-width: 768px) {
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-image,
+  .card-body {
+    padding: 30px;
+  }
+
+  .card-image {
+    border-radius: 24px 0 0 24px;
+    box-shadow: 0 4px 10px light-dark(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+  }
+
+  .card-body {
+    border-radius: 0 24px 24px 0;
+    margin-block: 10px;
+    margin-inline: 0;
+    animation: slidToRight 1.3s linear;
+  }
+}
+
+/* Animations */
+@keyframes slidToDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slidToRight {
+  from {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
