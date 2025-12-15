@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant</title>
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Swiper.js CSS Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <nav class="navbar">
+        <div class="container navbar-container">
+          <a href="#" class="logo"><img src="assets/logo.png" alt="Logo" /></a>
+
+          <ul class="nav-list" id="navList">
+            <li><a class="active-link" href="#hero">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#menu">menu</a></li>
+            <li><a href="#popular">popular</a></li>
+            <li><a href="#chefs">chefs</a></li>
+            <li><a href="#testimonials">testimonials</a></li>
+          </ul>
+
+          <button class="menu-toggle-btn" id="menuToggleBtn">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="section-padding" id="hero">
+        <div class="container grid-container hero-container">
+          <div class="hero-imgs">
+            <div class="hero-img-box">
+              <img src="assets/leaf-1.png" alt="" class="leaf leaf-1" />
+              <img src="assets/leaf-2.png" alt="" class="leaf leaf-2" />
+              <img src="assets/leaf-3.png" alt="" class="leaf leaf-3" />
+              <img src="assets/hero-img.png" alt="Hero Image" />
+            </div>
+          </div>
+
+          <div class="hero-text">
+            <h1>
+              Taste the <span>best</span> with<br />your <span>loved</span> ones
+            </h1>
+
+            <p>
+              Discover a culinary journey like no other at our restaurant, where
+              exquisite flavors and unforgettable experiences await you and your
+              loved ones.
+            </p>
+
+            <div class="btns">
+              <button class="btn btn-filled">
+                book a table <i class="fas fa-utensils"></i>
+              </button>
+              <button class="btn btn-bordered">
+                view menu <i class="fas fa-book-open"></i>
+              </button>
+            </div>
+
+            <div class="hero-counters">
+              <div class="hero-count">
+                <div class="hero-count-imgs">
+                  <img src="assets/client-1.jpg" alt="" />
+                  <img src="assets/client-2.jpg" alt="" />
+                  <img src="assets/client-3.jpg" alt="" />
+                </div>
+
+                <div class="hero-count-text">
+                  <h4 class="counter" data-target="15000">15000+</h4>
+                  <span>Happy Clients</span>
+                </div>
+              </div>
+
+              <div class="hero-count">
+                <div class="hero-count-imgs">
+                  <img src="assets/starter-1.png" alt="" />
+                  <img src="assets/starter-2.png" alt="" />
+                  <img src="assets/starter-3.png" alt="" />
+                </div>
+
+                <div class="hero-count-text">
+                  <h4 class="counter" data-target="350">350+</h4>
+                  <span>Dishes</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="section-padding" id="about">
+        <div class="container grid-container">
+          <div class="about-imgs">
+            <img src="assets/about-img-1.jpg" alt="" />
+            <img src="assets/about-img-2.jpg" alt="" />
+            <img src="assets/about-img-3.jpg" alt="" />
+          </div>
+
+          <div class="about-text">
+            <div class="sub-heading">
+              <h2>about us</h2>
+              <h3>create <span>memorable</span> dining experiences</h3>
+            </div>
+
+            <p>
+              At our restaurant, we are passionate about delivering exceptional
+              dining experiences that tantalize your taste buds and create
+              lasting memories. Our culinary team crafts exquisite dishes using
+              the freshest ingredients, blending traditional flavors with modern
+              techniques. Whether you're celebrating a special occasion or
+              simply seeking a delightful meal, we invite you to join us and
+              savor the art of fine dining in a warm and inviting atmosphere.
+            </p>
+
+            <p>
+              Our commitment to excellence extends beyond our cuisine. From the
+              moment you step through our doors, you'll be greeted with
+              exceptional service and a welcoming ambiance that sets the stage
+              for an unforgettable dining experience. We believe that great food
+              is meant to be shared, and we look forward to welcoming you and
+              your loved ones to our restaurant soon.
+            </p>
+
+            <button class="btn btn-bordered">
+              learn more <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Menu Section -->
+      <section class="section-padding" id="menu">
+        <div class="container menu-container">
+          <img src="assets/floating-img-1.png" alt="" class="floating-img" />
+
+          <div class="sub-heading">
+            <h2>our menu</h2>
+            <h3>
+              Explore our diverse menu crafted to <span>satisfy</span> every
+              palate
+            </h3>
+          </div>
+
+          <!-- Starters -->
+          <div class="menu-section">
+            <div class="menu-img">
+              <img src="assets/menu-img-1.jpg" alt="" />
+            </div>
+
+            <div class="menu-text">
+              <h4>starters</h4>
+              <ul>
+                <li class="menu-item">
+                  <div class="menu-item-img">
+                    <img src="assets/starter-1.png" alt="" />
+                  </div>
+
+                  <div class="menu-item-text">
+                    <div class="menu-item-header">
+                      <h5>buffalo wings</h5>
+                      <div class="price">$25.00</div>
+                    </div>
+
+                    <p class="menu-item-description">
+                      Crispy chicken wings tossed in a tangy buffalo sauce with
+                      celery sticks dressing.
+                    </p>
+                  </div>
+                </li>
+
+                <li class="menu-item">
+                  <div class="menu-item-img">
+                    <img src="assets/starter-2.png" alt="" />
+                  </div>
+
+                  <div class="menu-item-text">
+                    <div class="menu-item-header">
+                      <h5>grilled chicken salad</h5>
+                      <div class="price">$19.60</div>
+                    </div>
+
+                    <p class="menu-item-description">
+                      A fresh salad topped with grilled chicken, mixed greens,
+                      cherry tomatoes, cucumbers, and a light vinaigrette
+                      dressing.
+                    </p>
+                  </div>
+                </li>
+
+                <li class="menu-item">
+                  <div class="menu-item-img">
+                    <img src="assets/starter-3.png" alt="" />
+                  </div>
+
+                  <div class="menu-item-text">
+                    <div class="menu-item-header">
+                      <h5>Nachos</h5>
+                      <div class="price">$20.10</div>
+                    </div>
+
+                    <p class="menu-item-description">
+                      Crispy tortilla chips topped with melted cheese,
+                      jalapeños, and salsa.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Main Courses -->
+          <div class="menu-section even">
+            <div class="menu-img">
+              <img src="assets/menu-img-2.jpg" alt="" />
+            </div>
+
+            <div class="menu-text">
+              <h4>main courses</h4>
+              <ul>
+                <li class="menu-item">
+                  <div class="menu-item-img">
+                    <img src="assets/main-course-1.png" alt="" />
+                  </div>
+
+                  <div class="menu-item-text">
+                    <div class="menu-item-header">
+                      <h5>BBQ ribs</h5>
+                      <div class="price">$55.20</div>
+                    </div>
+
+                    <p class="menu-item-description">
+                      Tender beef ribs slow-cooked to perfection and glazed with
+                      a smoky barbecue sauce.
+                    </p>
+                  </div>
+                </li>
+
+                <li class="menu-item">
+                  <div class="menu-item-img">
+                    <img src="assets/main-course-2.png" alt="" />
+                  </div>
+
+                  <div class="menu-item-text">
+                    <div class="menu-item-header">
+                      <h5>grilled lobster</h5>
+                      <div class="price">$33.40</div>
+                    </div>
+
+                    <p class="menu-item-description">
+                      Fresh lobster grilled to perfection and served with garlic
+                      butter sauce.
+                    </p>
+                  </div>
+                </li>
+
+                <li class="menu-item">
+                  <div class="menu-item-img">
+                    <img src="assets/main-course-3.png" alt="" />
+                  </div>
+
+                  <div class="menu-item-text">
+                    <div class="menu-item-header">
+                      <h5>fried chicken</h5>
+                      <div class="price">$40.05</div>
+                    </div>
+
+                    <p class="menu-item-description">
+                      Crispy fried chicken seasoned with a blend of spices,
+                      served with mashed potatoes.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Desserts -->
+          <div class="menu-section">
+            <div class="menu-img">
+              <img src="assets/menu-img-3.jpg" alt="" />
+            </div>
+
+            <div class="menu-text">
+              <h4>desserts</h4>
+              <ul>
+                <li class="menu-item">
+                  <div class="menu-item-img">
+                    <img src="assets/dessert-1.png" alt="" />
+                  </div>
+
+                  <div class="menu-item-text">
+                    <div class="menu-item-header">
+                      <h5>lava cake</h5>
+                      <div class="price">$21.00</div>
+                    </div>
+
+                    <p class="menu-item-description">
+                      A decadent chocolate cake with a molten center, served
+                      warm with a scoop of vanilla ice cream.
+                    </p>
+                  </div>
+                </li>
+
+                <li class="menu-item">
+                  <div class="menu-item-img">
+                    <img src="assets/dessert-2.png" alt="" />
+                  </div>
+
+                  <div class="menu-item-text">
+                    <div class="menu-item-header">
+                      <h5>apple pie</h5>
+                      <div class="price">$15.44</div>
+                    </div>
+
+                    <p class="menu-item-description">
+                      A classic dessert made with fresh apples, cinnamon, and a
+                      flaky crust.
+                    </p>
+                  </div>
+                </li>
+
+                <li class="menu-item">
+                  <div class="menu-item-img">
+                    <img src="assets/dessert-3.png" alt="" />
+                  </div>
+
+                  <div class="menu-item-text">
+                    <div class="menu-item-header">
+                      <h5>carrot cake</h5>
+                      <div class="price">$35.00</div>
+                    </div>
+
+                    <p class="menu-item-description">
+                      A moist and flavorful cake made with grated carrots,
+                      spices, and cream cheese frosting.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="btns menu-btns">
+            <button class="btn btn-filled">
+              book a table <i class="fas fa-utensils"></i>
+            </button>
+
+            <button class="btn btn-bordered">
+              full menu <i class="fas fa-book-open"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Popular Section -->
+      <section class="section-padding" id="popular">
+        <div class="container popular-container">
+          <img src="assets/floating-img-2.png" alt="" class="floating-img" />
+
+          <div class="sub-heading">
+            <h2>popular dishes</h2>
+            <h3>Discover our most <span>popular</span> dishes</h3>
+          </div>
+
+          <!-- Carousel -->
+          <div class="swiper popular-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="card popular-card">
+                  <img src="assets/popular-item-img-1.png" alt="" />
+
+                  <div class="card-body">
+                    <div class="card-heading">
+                      <h4>seafood platter</h4>
+                      <div class="price">$43.45</div>
+                    </div>
+
+                    <div class="rating">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i
+                      ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                      ><i class="fas fa-star"></i>
+                      5.0
+                      <span>(183)</span>
+                    </div>
+
+                    <p class="description">
+                      Juicy oysters and succulent shrimp served on a bed of ice.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card popular-card">
+                  <img src="assets/popular-item-img-2.png" alt="" />
+
+                  <div class="card-body">
+                    <div class="card-heading">
+                      <h4>beef steak</h4>
+                      <div class="price">$48.05</div>
+                    </div>
+
+                    <div class="rating">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i
+                      ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                      ><i class="fas fa-star"></i>
+                      5.0
+                      <span>(183)</span>
+                    </div>
+
+                    <p class="description">
+                      A tender and juicy beef steak cooked to perfection.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card popular-card">
+                  <img src="assets/popular-item-img-3.png" alt="" />
+
+                  <div class="card-body">
+                    <div class="card-heading">
+                      <h4>cheese cake</h4>
+                      <div class="price">$30.45</div>
+                    </div>
+
+                    <div class="rating">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i
+                      ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                      ><i class="fas fa-star"></i>
+                      5.0
+                      <span>(183)</span>
+                    </div>
+
+                    <p class="description">
+                      A creamy and rich cheesecake topped with fresh berries.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card popular-card">
+                  <img src="assets/popular-item-img-4.png" alt="" />
+
+                  <div class="card-body">
+                    <div class="card-heading">
+                      <h4>chicken roast</h4>
+                      <div class="price">$53.40</div>
+                    </div>
+
+                    <div class="rating">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i
+                      ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                      ><i class="fas fa-star"></i>
+                      5.0
+                      <span>(183)</span>
+                    </div>
+
+                    <p class="description">
+                      A succulent roasted chicken seasoned with herbs and
+                      spices, served with roasted vegetables.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card popular-card">
+                  <img src="assets/popular-item-img-5.png" alt="" />
+
+                  <div class="card-body">
+                    <div class="card-heading">
+                      <h4>brownies</h4>
+                      <div class="price">$23.45</div>
+                    </div>
+
+                    <div class="rating">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i
+                      ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                      ><i class="fas fa-star"></i>
+                      5.0
+                      <span>(183)</span>
+                    </div>
+
+                    <p class="description">
+                      Rich and fudgy chocolate brownies drizzled with chocolate
+                      sauce.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- Navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reservation Section -->
+      <section class="section-padding reservation" id="reservation">
+        <div class="container reservation-container">
+          <div class="sub-heading">
+            <h2>table reservation</h2>
+            <h3>Reserve your <span>table</span> in advance</h3>
+          </div>
+
+          <form>
+            <div class="form-group">
+              <label for="name">full name:</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="John Doe"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">e-mail:</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="myname@gmail.com"
+                required
+              />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="datetime">date & time:</label>
+                <input
+                  type="datetime-local"
+                  name="datetime"
+                  id="datetime"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="guests">guests:</label>
+                <input
+                  type="number"
+                  name="guests"
+                  id="guests"
+                  placeholder="10"
+                  min="1"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="requests">requests:</label>
+              <textarea
+                name="requests"
+                id="requests"
+                placeholder="Any special requests"
+                rows="4"
+              ></textarea>
+            </div>
+
+            <button class="btn btn-filled">
+              reserve now <i class="far fa-bookmark"></i>
+            </button>
+          </form>
+        </div>
+
+        <video autoplay loop muted class="video-bg">
+          <source src="assets/restaurant-view.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <!-- Chefs Section -->
+      <section class="section-padding" id="chefs">
+        <div class="container grid-container chef-container">
+          <img src="assets/floating-img-3.png" alt="" class="floating-img" />
+
+          <div class="chef-imgs">
+            <img src="assets/chef-1.jpg" alt="" />
+            <img src="assets/chef-2.jpg" alt="" />
+            <img src="assets/chef-3.jpg" alt="" />
+          </div>
+
+          <div class="chef-text">
+            <div class="sub-heading">
+              <h2>our chefs</h2>
+              <h3>Meet our <span>expert</span> chefs</h3>
+            </div>
+
+            <p>
+              Our team of expert chefs is dedicated to crafting exceptional
+              culinary experiences that delight the senses. With a passion for
+              innovation and a commitment to quality, our chefs bring a wealth
+              of expertise and creativity to every dish they create. From
+              sourcing the finest ingredients to mastering intricate cooking
+              techniques, our chefs are true artisans of their craft. Join us
+              and savor the culinary masterpieces crafted by our talented team.
+            </p>
+
+            <p>
+              Each chef on our team brings a unique perspective and skill set,
+              resulting in a diverse and dynamic menu that caters to all tastes.
+              Whether you're a fan of classic flavors or adventurous cuisine,
+              our chefs are dedicated to delivering an unforgettable dining
+              experience. Come and meet the culinary artists behind our
+              exceptional dishes and discover the passion and creativity that
+              sets us apart.
+            </p>
+
+            <button class="btn btn-bordered">
+              learn more <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonial Section -->
+      <section class="section-padding" id="testimonials">
+        <div class="container testimonial-container">
+          <img src="assets/floating-img-4.png" alt="" class="floating-img" />
+
+          <div class="sub-heading">
+            <h2>testimonials</h2>
+            <h3>What our <span>customers</span> are saying</h3>
+          </div>
+
+          <!-- Carousel -->
+          <div class="swiper testimonial-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="card testimonial-card">
+                  <img src="assets/client-1.jpg" alt="" />
+
+                  <div class="card-body">
+                    <h4>john doe</h4>
+
+                    <div class="rating">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i
+                      ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                      ><i class="fas fa-star-half-stroke"></i>
+                      4.8
+                    </div>
+
+                    <p class="description">
+                      The food was absolutely delicious, and the service was
+                      impeccable. I can't wait to come back!
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card testimonial-card">
+                  <img src="assets/client-2.jpg" alt="" />
+
+                  <div class="card-body">
+                    <h4>june cha</h4>
+
+                    <div class="rating">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i
+                      ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                      ><i class="fas fa-star-half-stroke"></i>
+                      4.8
+                    </div>
+
+                    <p class="description">
+                      The food was absolutely delicious, and the service was
+                      impeccable. I can't wait to come back!
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card testimonial-card">
+                  <img src="assets/client-3.jpg" alt="" />
+
+                  <div class="card-body">
+                    <h4>dan brown</h4>
+
+                    <div class="rating">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i
+                      ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                      ><i class="fas fa-star-half-stroke"></i>
+                      4.8
+                    </div>
+
+                    <p class="description">
+                      The food was absolutely delicious, and the service was
+                      impeccable. I can't wait to come back!
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card testimonial-card">
+                  <img src="assets/client-4.jpg" alt="" />
+
+                  <div class="card-body">
+                    <h4>maya myles</h4>
+
+                    <div class="rating">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i
+                      ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                      ><i class="fas fa-star-half-stroke"></i>
+                      4.8
+                    </div>
+
+                    <p class="description">
+                      The food was absolutely delicious, and the service was
+                      impeccable. I can't wait to come back!
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card testimonial-card">
+                  <img src="assets/client-5.jpg" alt="" />
+
+                  <div class="card-body">
+                    <h4>jonathan nunfiez</h4>
+
+                    <div class="rating">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i
+                      ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                      ><i class="fas fa-star-half-stroke"></i>
+                      4.8
+                    </div>
+
+                    <p class="description">
+                      The food was absolutely delicious, and the service was
+                      impeccable. I can't wait to come back!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsletter Section -->
+      <section class="section-padding newsletter">
+        <div class="container newsletter-container">
+          <img src="assets/floating-img-5.png" alt="" class="floating-img" />
+
+          <div class="newsletter-text">
+            <h3><span>Subscribe</span> to our newsletter for latest updates</h3>
+            <p>
+              Stay updated with our latest news, special offers, and delicious
+              recipes by subscribing to our newsletter.
+            </p>
+          </div>
+
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your e-mail" required />
+
+            <button class="btn btn-filled">subscribe</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="section-padding footer">
+      <div class="container footer-container">
+        <div class="footer-brand">
+          <a href="#" class="logo"><img src="assets/logo.png" alt="Logo" /></a>
+
+          <p>Delicious food & memorable dining experiences.</p>
+
+          <div class="socials">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>quick links</h4>
+
+          <ul>
+            <li><a href="#hero">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#menu">menu</a></li>
+            <li><a href="#reservation">reservation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>contact</h4>
+          <p>123 Food Street, Flavor Town</p>
+          <p>Phone: <a href="#">+1 (234) 567-890</a></p>
+          <p>E-Mail: <a href="#">info@example.com</a></p>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <img src="assets/floating-img-6.png" alt="" class="floating-img" />
+        <img src="assets/floating-img-6.png" alt="" class="floating-img left" />
+
+        <p>© <span id="currentYear"></span> Restaurant. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Swiper.js JS Link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <!-- JS File -->
+    <script src="main.js"></script>
+  </body>
+</html>
