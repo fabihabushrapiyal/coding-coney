@@ -1,0 +1,154 @@
+:root {
+  --light-red: #932f4f;
+  --deep-red: #69122e;
+  --light-input-bg: #2a2a30;
+  --deep-input-bg: #1a1a1e;
+  --text-bright: #fff;
+  --text-muted: #d3d3d3;
+  --car-stop: -60%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  display: grid;
+  place-items: center;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)),
+    url('img/bg.jpg') no-repeat center center/cover;
+  color: var(--text-muted);
+  overflow-x: hidden;
+}
+
+.wrapper {
+  position: relative;
+  width: min(90%, 34.5rem);
+  padding: 1.85rem;
+  padding-bottom: 5.65rem;
+  background-color: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transform: translateY(-100%);
+  opacity: 0;
+  animation: formDrop 0.8s ease forwards;
+}
+
+.header {
+  margin-bottom: 1.8rem;
+}
+
+.header h1 {
+  color: var(--text-bright);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.header p {
+  font-size: 0.9rem;
+}
+
+.login-form {
+  position: relative;
+  z-index: 100;
+}
+
+.input-group {
+  margin-bottom: 1.25rem;
+}
+
+.input-group label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.input-group input {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.75rem;
+  background-color: var(--light-input-bg);
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: var(--text-bright);
+  outline: 0;
+  transition: 0.3s;
+}
+
+.input-group input:focus {
+  border-color: var(--deep-red);
+  background-color: var(--deep-input-bg);
+}
+
+.btn {
+  font-size: 1.1rem;
+  padding: 0.5em 1em;
+  margin-top: 0.65rem;
+  background-color: var(--deep-red);
+  color: var(--text-bright);
+  border: 0;
+  border-radius: 6px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--light-red);
+  box-shadow: 0 0 20px rgba(254, 47, 109, 0.4);
+}
+
+.car {
+  position: absolute;
+  width: 30rem;
+  bottom: -3.5rem;
+  right: -200%;
+  pointer-events: none;
+  animation: driveIn 1.5s ease-in-out forwards;
+}
+
+/* Responsive CSS */
+@media (width >= 23em) {
+  :root {
+    --car-stop: -55%;
+  }
+
+  .car {
+    width: 34rem;
+  }
+}
+
+@media (width >= 37.5em) {
+  :root {
+    --car-stop: -22%;
+  }
+
+  .car {
+    width: 37.5rem;
+  }
+}
+
+/* Animation */
+@keyframes formDrop {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes driveIn {
+  to {
+    right: var(--car-stop);
+  }
+}
