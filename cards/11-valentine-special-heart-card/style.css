@@ -1,0 +1,141 @@
+:root {
+  --bg-clr: #f8cedd;
+  --heart-clr: #f31785;
+  --deep-clr: #4c012a;
+  --green-clr: #035d03;
+  --red-clr: #c10505;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  /* display: grid;
+  place-items: center; */
+  display: flex;
+  justify-content: center;
+  gap: 15rem;
+  background-color: var(--bg-clr);
+  font-family: 'Pangolin', cursive;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heart {
+  position: relative;
+  width: 12.5rem;
+  height: 17rem;
+}
+
+.half-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -2.5rem;
+  transition: 1s;
+}
+
+.half-heart {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -1.5rem;
+  background-image: linear-gradient(
+    140deg,
+    var(--heart-clr) 62%,
+    transparent 34%
+  );
+  border-radius: 50% 50% 0 0;
+  transform: rotate(-50deg);
+}
+
+.half-box.right {
+  transform-origin: 70% 0;
+}
+
+.container.active .half-box.right {
+  transform: rotateY(180deg);
+}
+
+.heart-text {
+  position: absolute;
+  top: 25%;
+  right: 0;
+  color: var(--deep-clr);
+  font-weight: 600;
+  font-size: 1.5rem;
+  width: 100%;
+  text-align: center;
+  z-index: 100;
+  transform: translate(-50%) scale(0);
+  transition: 0.5s ease-in;
+}
+
+.heart-text #heartText2 {
+  font-size: 2.3rem;
+}
+
+.container.active .heart-text {
+  transform: translate(0) scale(1);
+}
+
+.btns {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.btn {
+  font-size: 1.5rem;
+  padding: 0.3em 1.5em;
+  background-color: transparent;
+  color: var(--deep-clr);
+  border: 2px solid var(--deep-clr);
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn.open:hover {
+  background-color: var(--deep-clr);
+  color: var(--bg-clr);
+}
+
+.btn.yes {
+  background-color: var(--green-clr);
+  border-color: var(--green-clr);
+  color: var(--bg-clr);
+}
+
+.btn.no {
+  background-color: var(--red-clr);
+  border-color: var(--red-clr);
+  color: var(--bg-clr);
+}
+
+.btn:is(.yes, .no):hover {
+  opacity: 0.9;
+}
+
+.btn:is(.yes, .no):disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn:is(.yes, .no),
+.container.active .btn.open {
+  display: none;
+}
+
+.container.active .btn:is(.yes, .no) {
+  display: block;
+}
