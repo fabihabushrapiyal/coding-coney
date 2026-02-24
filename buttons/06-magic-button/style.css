@@ -1,0 +1,67 @@
+:root {
+  --dark-bg: #0f0f11;
+  --btn-off-bg: #1c1c1e;
+  --btn-off-text: #5e5e60;
+  --purple-bg: #130327;
+  --purple-primary: #8c44ff;
+  --purple-secondary: #6100ff;
+  --white-clr: #fff;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: var(--dark-bg);
+  transition: 0.3s;
+}
+
+.magic-btn {
+  font-size: 1.5rem;
+  padding: 0.9em 1.8em;
+  letter-spacing: 0.05em;
+  border-radius: 6em;
+  font-weight: bold;
+  color: var(--btn-off-text);
+  background-color: var(--btn-off-bg);
+  border: 0.065em solid transparent;
+  outline: 0.2em solid transparent;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.magic-btn:hover {
+  background-image: linear-gradient(
+    135deg,
+    var(--purple-primary),
+    var(--purple-secondary)
+  );
+  color: var(--white-clr);
+  border-color: rgba(255, 255, 255, 0.2);
+  outline-color: rgba(140, 68, 255, 0.4);
+  box-shadow: 0 0 2.5em var(--purple-primary),
+    0 0 3.75em var(--purple-secondary),
+    inset 0 0.065em 0 rgba(255, 255, 255, 0.4),
+    inset 0 -0.25em 0.65em rgba(0, 0, 0, 0.2);
+  scale: 1.05;
+}
+
+.magic-btn:hover i {
+  animation: pulse 1.5s infinite;
+}
+
+/* Icon Animation */
+@keyframes pulse {
+  0%,
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1) rotate(-10deg);
+  }
+}
+
+body:has(.magic-btn:hover) {
+  background-color: var(--purple-bg);
+}
