@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login-Signup Form</title>
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="image-panel">
+        <img src="img/form-img.jpg" alt="Form Image" />
+
+        <div class="toggle-tab">
+          <div class="btn-bg"></div>
+
+          <button type="button" id="signupBtn" class="toggle-btn active">
+            sign up
+          </button>
+
+          <button type="button" id="loginBtn" class="toggle-btn">login</button>
+        </div>
+      </div>
+
+      <div class="form-panel">
+        <div class="form-content active-form" id="signupForm">
+          <div class="user-i-container">
+            <i class="fas fa-user-plus"></i>
+          </div>
+
+          <h2>sign up</h2>
+
+          <form>
+            <div class="input-group">
+              <label for="signupEmail"
+                ><i class="fas fa-at"></i> Email Address</label
+              >
+
+              <input
+                type="email"
+                name="email"
+                id="signupEmail"
+                placeholder="name@example.com"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="signupPass"
+                ><i class="fas fa-lock"></i> Password</label
+              >
+
+              <input
+                type="password"
+                name="password"
+                id="signupPass"
+                placeholder="••••••••"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="confirmPass"
+                ><i class="fas fa-lock"></i> Confirm Password</label
+              >
+
+              <input
+                type="password"
+                name="password"
+                id="confirmPass"
+                placeholder="••••••••"
+                required
+              />
+            </div>
+
+            <button type="submit" class="submit-btn">sign up</button>
+
+            <div class="google">
+              <p>or</p>
+
+              <a href="#"
+                ><img src="img/google.png" alt="Google Logo" />Google</a
+              >
+            </div>
+          </form>
+        </div>
+
+        <div class="form-content" id="loginForm">
+          <div class="user-i-container">
+            <i class="fas fa-user"></i>
+          </div>
+
+          <h2>login</h2>
+
+          <form>
+            <div class="input-group">
+              <label for="loginEmail"
+                ><i class="fas fa-at"></i> Email Address</label
+              >
+
+              <input
+                type="email"
+                name="email"
+                id="loginEmail"
+                placeholder="name@example.com"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="loginPass"
+                ><i class="fas fa-lock"></i> Password</label
+              >
+
+              <input
+                type="password"
+                name="password"
+                id="loginPass"
+                placeholder="••••••••"
+                required
+              />
+            </div>
+
+            <a href="#" class="forgot-pass">Forgot password?</a>
+
+            <button type="submit" class="submit-btn">login</button>
+
+            <div class="google">
+              <p>or</p>
+
+              <a href="#"
+                ><img src="img/google.png" alt="Google Logo" />Google</a
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS File -->
+    <script src="main.js"></script>
+  </body>
+</html>
