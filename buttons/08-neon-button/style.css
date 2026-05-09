@@ -1,0 +1,38 @@
+:root {
+  --bg-clr: #11021b;
+  --neon-clr: #b24af3;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: var(--bg-clr);
+  font-family: sans-serif;
+}
+
+.neon-btn {
+  display: inline-block;
+  font-size: 1.5rem;
+  padding: 0.9em 1.8em;
+  letter-spacing: 0.05em;
+  border-radius: 0.5em;
+  font-weight: bold;
+  background-color: transparent;
+  color: var(--neon-clr);
+  text-transform: uppercase;
+  border: 0.12em solid var(--neon-clr);
+  box-shadow: inset 0 0 0.9em 0 var(--neon-clr), 0 0 0.5em 0 var(--neon-clr);
+  cursor: pointer;
+  transition: 0.3s;
+  /* Reflection */
+  -webkit-box-reflect: below 0.1em linear-gradient(transparent, #0005);
+}
+
+.neon-btn:hover {
+  color: var(--bg-clr);
+  background-color: var(--neon-clr);
+  box-shadow: 0 0 0.625em var(--neon-clr), 0 0 1.25em var(--neon-clr),
+    0 0 2.5em var(--neon-clr), 0 0 5em var(--neon-clr);
+  transition-delay: 0.1s;
+}

@@ -1,0 +1,83 @@
+:root {
+  --body-bg: #000;
+  --btn-bg: #0a0a0a;
+  --white-clr: #f1f7f8;
+  --fb-clr: #1877f2;
+  --insta-clr: #c13584;
+  --yt-clr: #ff0000;
+  --x-clr: #fff;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: var(--body-bg);
+}
+
+.btn-container {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.btn {
+  position: relative;
+  font-family: sans-serif;
+  font-size: 2rem;
+  padding: 0.5em;
+  border-radius: 6em;
+  background-color: transparent;
+  color: var(--white-clr);
+  border: 0.09em solid;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn span {
+  position: absolute;
+  font-size: 0.5em;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  opacity: 0;
+  z-index: -1;
+  transition: 0.3s;
+}
+
+.btn:is(:hover, :focus) {
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: translateY(0.625em);
+}
+
+.btn:is(:hover, :focus) span {
+  top: -2.5em;
+  opacity: 1;
+}
+
+.fb:is(:hover, :focus) {
+  color: var(--fb-clr);
+  box-shadow: 0 0 1.25em rgba(24, 119, 242, 0.5);
+  text-shadow: 0 0 0.5em var(--fb-clr);
+}
+
+.insta:is(:hover, :focus) {
+  color: var(--insta-clr);
+  box-shadow: 0 0 1.25em rgba(255, 48, 108, 0.5);
+  text-shadow: 0 0 0.5em var(--insta-clr);
+}
+
+.yt:is(:hover, :focus) {
+  color: var(--yt-clr);
+  box-shadow: 0 0 1.25em rgba(255, 0, 0, 0.5);
+  text-shadow: 0 0 0.5em var(--yt-clr);
+}
+
+.x:is(:hover, :focus) {
+  color: var(--x-clr);
+  box-shadow: 0 0 1.25em rgba(255, 255, 255, 0.3);
+  text-shadow: 0 0 0.5em var(--x-clr);
+}
