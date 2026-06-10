@@ -1,0 +1,92 @@
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: black;
+}
+
+@property --clr-size-1 {
+  syntax: '<length>';
+  inherits: false;
+  initial-value: 55px;
+}
+
+@property --clr-size-2 {
+  syntax: '<length>';
+  inherits: false;
+  initial-value: 70px;
+}
+
+@property --clr-size-3 {
+  syntax: '<length>';
+  inherits: false;
+  initial-value: 80px;
+}
+
+@property --clr-size-4 {
+  syntax: '<length>';
+  inherits: false;
+  initial-value: 65px;
+}
+
+.gradient-btn {
+  position: relative;
+  isolation: isolate;
+  font-size: 1.5rem;
+  padding: 0.9em 1.8em;
+  border-radius: 0.5em;
+  letter-spacing: 0.05em;
+  border: 0;
+  font-weight: bold;
+  background-color: transparent;
+  background-image:
+    radial-gradient(circle var(--clr-size-1) at 0% 40%, deeppink, transparent),
+    radial-gradient(circle var(--clr-size-2) at 25% 90%, blue, transparent),
+    radial-gradient(
+      circle var(--clr-size-3) at 50% 50%,
+      orangered,
+      transparent
+    ),
+    radial-gradient(circle var(--clr-size-4) at 90% 60%, lime, transparent);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  animation: gradientAnimation 3s linear infinite;
+}
+
+.gradient-btn::after {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  z-index: -1;
+  background-color: black;
+  border-radius: 0.3em;
+  scale: 0;
+  transition: 0.3s;
+}
+
+.gradient-btn:hover::after {
+  scale: 1;
+}
+
+/* Animation */
+@keyframes gradientAnimation {
+  20% {
+    --clr-size-1: 130px;
+  }
+
+  40% {
+    --clr-size-1: 55px;
+    --clr-size-2: 160px;
+  }
+
+  60% {
+    --clr-size-2: 70px;
+    --clr-size-3: 170px;
+  }
+
+  80% {
+    --clr-size-3: 80px;
+    --clr-size-4: 150px;
+  }
+}
